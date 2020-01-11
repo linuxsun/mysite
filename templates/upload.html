@@ -1,0 +1,50 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- 上述meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.bootcss.com/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{% static 'login/css/register.css' %}" rel="stylesheet"/>
+    <title>upload</title>
+  </head>
+  <body>
+    <div class="container">
+        <div class="col">
+
+        <input type="file" class="btn btn-lg active" name="file"/>
+{#            <form class="form-horizontal" action="/upload/" method="post" enctype="multipart/form-data" >#}
+{#                {% csrf_token %}#}
+{#              <div class="form-group">#}
+{#                <label class="col-sm-2 control-label">项目详情</label>#}
+{#                <div class="col-sm-10">#}
+{#                  <input type="file" class="btn btn-primary btn-lg active" name="file"/>上传图片#}
+{#                  <label class="control-label">支持jpg、jpeg、png、gif格式，大小不超过2M，建议尺寸：宽740px</label>#}
+{#                </div>#}
+{#              </div>#}
+{#                <button type="submit" class="btn btn-primary" id="next">提交</button>#}
+{#            </form>#}
+            <form action="{% url upload_pic %}" method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                <p>
+                    <input id="id_image" type="file" class="" name="image">
+                </p>
+                <input type="submit" value="Submit" />
+            </form>
+
+
+        </div>
+    </div> <!-- /container -->
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    {#    以下三者的引用顺序是固定的#}
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
+    <script src="https://cdn.bootcss.com/popper.js/1.15.0/umd/popper.js"></script>
+    <script src="https://cdn.bootcss.com/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+  </body>
+</html>
