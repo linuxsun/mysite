@@ -4,4 +4,5 @@ migrations
 settings.py
 db.sqlite3
 __pycache__
+login/__pycache__
 .git
