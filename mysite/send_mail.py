@@ -19,7 +19,7 @@ os.environ['DJANGO_SETTINGS_MODULE'] = 'settings'
 
 if __name__ == '__main__':
 
-    subject, from_email, to = '来自测试邮件', 'username@mail.com', 'touser@mail.com'
+    subject, from_email, to = '来自测试邮件', 'usernameFrom@mail.com', 'usernameTo@mail.com'
     text_content = '欢迎访问!'
     html_content = '<p>欢迎访问<a href="http://www.web.com" target=blank>www.web.com</a>，这是演示站点!</p>'
     msg = EmailMultiAlternatives(subject, text_content, from_email, [to])
