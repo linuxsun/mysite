@@ -1,6 +1,8 @@
 from django.contrib import admin
 from . import models
 
+class ShowUserInf(admin.ModelAdmin):
+    list_display = ('name','email','sex','c_time')
 
 # class ArticleAdmin(admin.ModelAdmin):
 #     list_display = ('title','pub_date')
@@ -62,7 +64,7 @@ class CarAdmin(admin.ModelAdmin):
 # TokenAdmin.raw_id_fields = ['user']
 
 # Register your models here.
-admin.site.register(models.User)
+admin.site.register(models.User,ShowUserInf)
 admin.site.register(models.ConfirmString)
 # admin.site.register(models.Images,ImagesAdmin)
 admin.site.register(models.Images,ImagesAdmin)
