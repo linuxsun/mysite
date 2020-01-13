@@ -8,7 +8,9 @@ https://github.com/linuxsun/mysite.git
 
 ### edit settings.py
 
-```DATABASES = {
+```
+ALLOWED_HOSTS = ['127.0.0.1']
+DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'db_name',
